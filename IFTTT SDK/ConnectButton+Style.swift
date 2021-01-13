@@ -16,6 +16,7 @@ extension ConnectButton {
         
         /// Style the button for a white background
         case light
+        case dark
         
         struct Font {
             static let connect = UIFont(name: "AvenirNext-Bold", size: 22)!
@@ -27,6 +28,8 @@ extension ConnectButton {
             switch self {
             case .light:
                 return lightColorFooter()
+            case .dark:
+                return darkColorFooter()
             }
         }
         

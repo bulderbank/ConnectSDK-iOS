@@ -19,7 +19,7 @@ protocol ConnectButtonAnalyticsDelegate: AnyObject {
 public class ConnectButton: UIView {
     
     /// Adjust the button's style
-    private var style: Style {
+    public var style: Style {
         didSet {
             updateStyle()
         }
@@ -255,6 +255,8 @@ public class ConnectButton: UIView {
         switch style {
         case .light:
             applyLightStyle()
+        case .dark:
+            applyDarkStyle()
         }
     }
     
